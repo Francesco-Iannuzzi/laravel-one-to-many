@@ -37,6 +37,20 @@
         {{-- form made_by --}}
 
         <div class="mb-3">
+            <label for="cover" class="form-label">Cover</label>
+            <input type="text" name="cover" id="cover" class="form-control @error('cover') is-invalid @enderror"
+                placeholder="Add Cover" aria-describedby="helpCover" value="{{ old('cover', $project->cover) }}">
+            <small id="helpCover" class="text-muted">Insert Cover of the project</small>
+        </div>
+
+        @error('cover')
+            <div class="alert alert-danger" role="alert">
+                <strong>Error:</strong> {{ $message }}
+            </div>
+        @enderror
+        {{-- form cover --}}
+
+        <div class="mb-3">
             <label for="description" class="form-label">Description</label>
             <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description"
                 aria-describedby="helpDescription" rows="3">{{ old('description', $project->description) }}</textarea>
@@ -108,7 +122,7 @@
         @enderror
         {{-- form code_link --}}
 
-        <button type="submit" class="btn btn-primary w-100 mt-4 py-2 px-4">Edit</button>
+        <button type="submit" class="btn btn-primary w-100 mt-4 py-2 px-4">Update</button>
 
 
     </form>

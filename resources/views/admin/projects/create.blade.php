@@ -36,6 +36,20 @@
         {{-- form made_by --}}
 
         <div class="mb-3">
+            <label for="cover" class="form-label">Cover</label>
+            <input type="text" name="cover" id="cover" class="form-control @error('cover') is-invalid @enderror"
+                placeholder="Add Cover" aria-describedby="helpCover" value="{{ old('cover') }}">
+            <small id="helpCover" class="text-muted">Insert Cover of the project</small>
+        </div>
+
+        @error('cover')
+            <div class="alert alert-danger" role="alert">
+                <strong>Error:</strong> {{ $message }}
+            </div>
+        @enderror
+        {{-- form cover --}}
+
+        <div class="mb-3">
             <label for="description" class="form-label">Description</label>
             <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description"
                 aria-describedby="helpDescription" rows="3">{{ old('description') }}</textarea>
