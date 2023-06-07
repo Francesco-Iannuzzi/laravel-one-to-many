@@ -36,12 +36,12 @@
 
             <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
 
-            <div class="dropstart">
+            <div class="dropdown mx-5">
                 <button class="btn dropdown-toggle text-light" type="button" id="triggerId" data-bs-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     {{ Auth::user()->name }}
                 </button>
-                <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="triggerId">
+                <div class="dropdown-menu dropdown-center dropdown-menu-dark" aria-labelledby="triggerId">
                     <a class="dropdown-item" href="{{ url('/') }}">{{ __('Home Page') }}</a>
                     <a class="dropdown-item" href="{{ url('profile') }}">{{ __('Profile') }}</a>
                     <a class="dropdown-item" href="{{ route('logout') }}"

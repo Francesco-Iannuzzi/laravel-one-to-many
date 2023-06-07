@@ -29,10 +29,10 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
         
     ]);
 
-    Route::resource('types', TypeController::class)->parameters([
+   Route::resource('types', TypeController::class)->parameters([
         'types' => 'type:slug'
         
-    ]);
+   ]);
 }
 );
 
