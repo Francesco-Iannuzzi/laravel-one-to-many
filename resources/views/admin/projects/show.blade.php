@@ -13,6 +13,9 @@
                             <h2 class="card-title">{{ $project->title }}</h2>
                             <h5><strong>Author: </strong>{{ $project->made_by }}</h5>
                             <small><strong>Date: </strong>{{ $project->creation_date }}</small>
+                            <div class="meta">
+                                <span class="badge bg-primary">{{ $project->type?->name }}</span>
+                            </div>
                         </div>
                         <div class="card-bottom">
                             <p class="card-text"><strong>Description: </strong>{{ $project->description }}</p>

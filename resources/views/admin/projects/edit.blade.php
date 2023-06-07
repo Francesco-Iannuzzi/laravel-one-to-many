@@ -24,6 +24,20 @@
             {{-- form title --}}
 
             <div class="mb-3">
+                <label for="type_id" class="form-label">Type</label>
+                <select class="form-select @error('type_id') is-invalid @enderror" name="type_id" id="type_id">
+                    <option value="">Select Types</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}"
+                            {{ $type->id == old('type_id', $project->type->id) ? 'selected' : '' }}>
+                            {{ $type->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+            {{-- form select types --}}
+
+            <div class="mb-3">
                 <label for="made_by" class="form-label">Author</label>
                 <input type="text" name="made_by" id="made_by"
                     class="form-control @error('made_by') is-invalid @enderror" placeholder="Add Author"

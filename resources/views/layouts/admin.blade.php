@@ -66,15 +66,19 @@
                             <li class="nav-item">
                                 <a class="nav-link {{ Route::currentRouteName() == 'admin.dashboard' ? 'bg-dark text-light rounded' : '' }}"
                                     aria-current="page" href="{{ route('admin.dashboard') }}">
-                                    <span data-feather="home"></span>
                                     {{ __('Dashboard') }}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ Route::currentRouteName() == 'admin.projects.index' ? 'bg-dark text-light rounded' : '' }}"
                                     href="{{ route('admin.projects.index') }}">
-                                    <span data-feather="file"></span>
                                     {{ __('Projects') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ Route::currentRouteName() == 'admin.types.index' ? 'bg-dark text-light rounded' : '' }}"
+                                    href="{{ route('admin.types.index') }}">
+                                    {{ __('Types') }}
                                 </a>
                             </li>
                         </ul>
