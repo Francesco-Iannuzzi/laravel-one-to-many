@@ -3,6 +3,7 @@
 @section('content')
     <div class="container py-5">
         @include('partials.session_message')
+
         <div class="table-responsive pt-3">
             <div class="d-flex justify-content-between">
                 <h1 class="fs-4 text-secondary my-4">Projects</h1>
