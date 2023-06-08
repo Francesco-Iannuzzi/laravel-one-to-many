@@ -8,7 +8,7 @@
             @csrf
 
             @method('PUT')
-            <h1 class="fs-4 text-secondary my-4">Edit {{ $project->title }}t</h1>
+            <h1 class="fs-4 text-secondary my-4">Edit {{ $project->title }}</h1>
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror"

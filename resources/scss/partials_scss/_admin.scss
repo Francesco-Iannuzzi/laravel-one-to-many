@@ -1,10 +1,10 @@
 #app {
 
     #navbar_admin {
-        height: 10%;
+        height: 3rem;
     }
 
     #container_admin {
-        height: 90%;
+        height: calc(100% - 3rem);
     }
 }
